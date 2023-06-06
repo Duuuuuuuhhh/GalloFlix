@@ -1,12 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GalloFlix.Interfaces
+namespace GalloFlix.Interfaces;
+
+public interface IRepository<T> where T : class
 {
-    public interface IRepository
-    {
-        
-    }
+    // CRUD: CREATE, READ, UPADTE, DELETE 
+    // 4 Operações básicas de todo banco de dados
+    void Create(T model); // Add 
+
+    List<T> ReadAll(); // Get 
+
+    T ReadById(int? id); // Get(id)
+
+    void Update(T model); //Edit
+
+    void Delete(int? id); // Delete
 }
