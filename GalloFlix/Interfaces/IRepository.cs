@@ -1,4 +1,3 @@
-
 namespace GalloFlix.Interfaces;
 
 public interface IRepository<T> where T : class
@@ -13,5 +12,5 @@ public interface IRepository<T> where T : class
 
     void Update(T model); //Edit
 
-    void Delete(int? id); // Delete
+    void Delete(int? id);
 }
